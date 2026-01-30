@@ -3,6 +3,7 @@
   "module": "src/index.ts",
   "type": "module",
   "main": "index.js",
+  "version": "0.0.1",
   "types": "src/index.ts",
   "exports": {
     ".": {
@@ -48,5 +49,8 @@
   "bugs": {
     "url": "https://github.com/LunasaVT/GamploSDK/issues"
   },
-  "homepage": "https://github.com/LunasaVT/GamploSDK#readme"
+  "homepage": "https://github.com/LunasaVT/GamploSDK#readme",
+  "dependencies": {
+    "node-fetch": "^3.3.2"
+  }
 }
