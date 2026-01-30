@@ -1,0 +1,52 @@
+{
+  "name": "gamplo-sdk",
+  "module": "src/index.ts",
+  "type": "module",
+  "main": "index.js",
+  "types": "src/index.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "import": "./src/index.ts",
+      "default": "./src/index.ts"
+    }
+  },
+  "files": [
+    "src",
+    "index.js",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "bun build src/index.ts --outdir . --format esm --target node",
+    "dev": "bun run src/index.ts",
+    "test": "bun test",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "typescript": "^5"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "description": "A comprehensive TypeScript SDK for integrating with Gamplo's API",
+  "keywords": [
+    "gaming",
+    "sdk",
+    "api",
+    "gamplo",
+    "multiplayer",
+    "achievements",
+    "chat"
+  ],
+  "author": "Lunasa",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LunasaVT/GamploSDK.git"
+  },
+  "bugs": {
+    "url": "https://github.com/LunasaVT/GamploSDK/issues"
+  },
+  "homepage": "https://github.com/LunasaVT/GamploSDK#readme"
+}
