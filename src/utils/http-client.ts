@@ -25,14 +25,16 @@ export class FetchHttpClient implements HttpClient {
     this.baseUrl = config.apiUrl.replace(/\/$/, '');
     this.timeout = config.timeout;
 
-    this.fetchImpl = config.fetch ?? globalThis.fetch;
+    const fetchSource = config.fetch ?? globalThis.fetch;
 
-    if (!this.fetchImpl) {
+    if (!fetchSource) {
       throw new Error(
         'No fetch implementation available. ' +
         'Provide config.fetch or run in an environment with global fetch.'
       );
     }
+
+    this.fetchImpl = fetchSource.bind(globalThis);
   }
 
   async get<T>(
